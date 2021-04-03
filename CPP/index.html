@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html>
+<head>
+
+<style>
+body {font-family: Arial, Helvetica, sans-serif;}
+form {border: 3px solid #f1f1f1;}
+
+input[type=text], input[type=password] {
+  width: 100%;
+  padding: 12px 20px;
+  margin: 8px 0;
+  display: inline-block;
+  border: 1px solid #ccc;
+  box-sizing: border-box;
+}
+
+input[type=button] {
+  background-color: orange;
+  color: white;
+  padding: 14px 20px;
+  margin: 8px 0;
+  border: none;
+  cursor: pointer;
+  width: 100%;
+}
+
+input[type=button]:hover {
+  opacity: 0.8;
+}
+
+
+
+.imgcontainer {
+  text-align: center;
+  margin: 12px 0 12px 0;
+}
+
+img.avatar {
+  width: 10%;
+  border-radius: 30%;
+}
+
+.container {
+  padding: 16px;
+}
+
+
+
+
+</style>
+
+</head>
+<body>
+
+<h2>Authentication Login For Tool Plaza</h2>
+
+<form action="" method="post" name="log" >
+  <div class="imgcontainer">
+    <img src="img/avtar.png" alt="Avatar" class="avatar">
+  </div>
+
+  <div class="container">
+    <label for="uname" ><b>Username</b></label>
+    <input type="text" name="uname"/>
+
+    <label for="psw"><b>Password</b></label>
+    <input type="password" name="psw"/>
+        
+    <input type="button" onclick="Login()" id="login" value="Login"/>
+    <label>
+      <input type="checkbox" checked="checked" name="remember"> Remember me
+    </label>
+  </div>
+
+</form>
+<script language="javascript" type="text/javascript">
+
+	
+	function Login() {
+
+	if( document.forms.log.uname.value=="TOLL121" &&  document.forms.log.psw.value=="Pass@123")
+	{
+		
+		 
+        location.href = "VechicleInfo.html";
+        
+    }
+	
+	else{
+		alert("Wrong Password ");
+	}
+
+}
+</script>
+
+</body>
+</html>
