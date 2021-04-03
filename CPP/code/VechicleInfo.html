@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Vechile</title>
+	<style type="text/css">
+		body{
+			background-image: url('img/bk.jpg');
+		}
+		input[type=text], select, .pay {
+  width: 100%;
+  padding: 12px 20px;
+  margin: 8px 0;
+  display: inline-block;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  box-sizing: border-box;
+
+
+}
+.container {
+  position: center;
+  right: 0;
+  margin: 20px;
+  max-width: 800px;
+  padding: 50px;
+  background-color: white;
+}
+input[type=button] {
+  width: 100%;
+  background-color: #4CAF50;
+  color: white;
+  padding: 14px 20px;
+  margin: 8px 0;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+}
+
+input[type=button]:hover {
+  background-image: url('img/bk.jpg');
+}
+
+
+	</style>
+	<script type="text/javascript">
+		alert("Login Success");
+		
+		function Pay() {
+			// body...
+			
+			if(document.getElementById("cash").checked==true)
+			{
+				alert("Payment Done");
+				window.print();
+			}
+			else if(document.getElementById("card").checked==true){
+				
+				 location.href = "Payment.html";
+
+			}
+			else{
+				alert("Payment Done");
+				window.print();
+			}
+
+
+		}
+		
+
+
+		
+	</script>
+</head>
+<body>
+	<h1 class="title">National Highway Authentication System</h1>
+<form class="container">
+	
+	<label>Name</label><br>
+	<select>
+	<option>Ms</option>
+	<option>Mr</option>
+	<option>Miss</option>
+	<option>Mrs</option>
+	</select>
+	<input type="text" name="" placeholder="First Name">
+	<input type="text" name="" placeholder="Last Name">
+	<br>
+	<label>Vechicle Type</label>
+	<select id="Vechicle">
+	<option id="car">Car </option>
+	<option id="jeep">Jeep</option>
+	<option id="van">Van</option>
+	<option id="truck">Truck</option>
+	<option id="travel">Travels</option>
+	<option></option>
+	</select><br>
+	<label>Applied Tax</label><br>
+	<input type="text" id="money"  >
+	<br>
+	<label>Vechicle No</label><br>
+	
+	<input type="text" name=""><br>
+	<div class="pay">
+	<input type="radio" name="Payment" checked="true" id="cash" >Cash
+	<input type="radio" name="Payment" id="card">Card
+	<input type="radio" name="Payment" id="fasttag">FastTag
+	</div>
+	<br>
+	<input type="button" name="" value="Procced to Pay" onclick="Pay()">
+</form>
+</body>
+</html>
